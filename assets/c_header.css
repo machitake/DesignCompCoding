@@ -1,0 +1,31 @@
+/* ------------------------------
+  レイアウト
+------------------------------*/
+.header-wrapper {
+  background: rgb(255, 255, 255);
+}
+@media screen and (min-width: 990px) {
+  .header-wrapper {
+    background: rgb(255, 255, 255,.5);
+    margin-bottom: -71px;
+  }
+}
+
+/* ------------------------------
+  メニュー
+------------------------------*/
+.header__menu-item {
+  font-weight: 700;
+  font-family: var(--font-heading-family);
+}
+
+/* ------------------------------
+  アイコン
+------------------------------*/
+.header__icons {
+  padding-right: 0;
+}
+
+.header__icon--cart {
+  margin-right: 0;
+}
