@@ -1,17 +1,4 @@
 /* ------------------------------
-  レイアウト
-------------------------------*/
-.header-wrapper {
-  background: rgb(255, 255, 255);
-}
-@media screen and (min-width: 990px) {
-  .header-wrapper {
-    background: rgb(255, 255, 255,.5);
-    margin-bottom: -71px;
-  }
-}
-
-/* ------------------------------
   メニュー
 ------------------------------*/
 .header__menu-item {
