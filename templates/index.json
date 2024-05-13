@@ -1,5 +1,44 @@
 {
   "sections": {
+    "c_slider_7qEL7M": {
+      "type": "c_slider",
+      "blocks": {
+        "slide_gD8RXN": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fv-1_pc.jpg",
+            "image_sp": "shopify:\/\/shop_images\/fv-1_sp.jpg",
+            "url": "shopify:\/\/collections\/automated-collection"
+          }
+        },
+        "slide_d4XftY": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fv-2_pc.jpg",
+            "image_sp": "shopify:\/\/shop_images\/fv-2_sp.jpg",
+            "url": ""
+          }
+        },
+        "slide_UyPW94": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/small-business-interior.jpg",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_gD8RXN",
+        "slide_d4XftY",
+        "slide_UyPW94"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_sp": 0,
+        "padding_bottom_sp": 0
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -69,6 +108,7 @@
     }
   },
   "order": [
+    "c_slider_7qEL7M",
     "image_banner",
     "featured_collection"
   ]
