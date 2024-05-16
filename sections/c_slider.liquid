@@ -45,7 +45,7 @@
           {% if block.settings.url != blank %}<a class="c_splide__slide--link" href="{{ block.settings.url }}">{% endif %}
             <picture>
               <source srcset="{{ block.settings.image_sp | image_url: width: 800 }}" media="(max-width: 750px)">
-              <img src="{{ block.settings.image | image_url: width: 1920 }}" width="1920" height="800" alt="{{ block.settings.image.alt }}" loading="lazy">
+              <img src="{{ block.settings.image | image_url: width: 1920 }}" width="1920" height="800" alt="{{ block.settings.image.alt }}">
             </picture>
           {% if block.settings.url != blank %}</a>{% endif %}
         </li>
