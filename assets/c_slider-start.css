@@ -1,0 +1,8 @@
+.splide {
+  margin-block: 60px;
+}
+
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+}

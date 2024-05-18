@@ -1,0 +1,103 @@
+{{ 'c_slider-start.css' | asset_url | stylesheet_tag }}
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
+<div class="splide c_splide-{{ section.id }}" role="group" aria-label="{{ section.settings.title }}">
+  <div class="splide__track">
+		<ul class="splide__list">
+      {% for block in section.blocks %}
+      <li class="splide__slide">
+        {%- if block.settings.image != blank -%}
+          {{ block.settings.image | image_url: width: 1920 | image_tag: alt: block.settings.image.alt, loading: "lazy", sizes: "100vw" }}
+        {%- endif -%}
+      </li>
+      {% endfor %}
+		</ul>
+  </div>
+</div>
+
+<script>
+  document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '.c_splide-{{ section.id }}', {
+    });
+    splide.mount();
+  } );
+</script>
+
+{% schema %}
+{
+  "name": "カスタム:スライダー（完成）",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "見出し",
+      "default": "見出し"
+    },
+    {
+      "type": "header",
+      "content": "上下の余白"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "上部の余白（PC）",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "下部の余白（PC)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_sp",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "上部の余白",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_sp",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "下部の余白",
+      "default": 0
+    }
+  ],
+  "blocks" : [
+    {
+      "type": "image",
+      "name": "画像",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "画像"
+        }
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name" : "カスタム:スライダー（完成）",
+      "category": "カスタムパーツ"
+    }
+  ]
+}
+{% endschema %}

@@ -1,44 +1,5 @@
 {
   "sections": {
-    "c_slider_7qEL7M": {
-      "type": "c_slider",
-      "blocks": {
-        "slide_gD8RXN": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/fv-1_pc.jpg",
-            "image_sp": "shopify:\/\/shop_images\/fv-1_sp.jpg",
-            "url": "shopify:\/\/collections\/automated-collection"
-          }
-        },
-        "slide_d4XftY": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/fv-2_pc.jpg",
-            "image_sp": "shopify:\/\/shop_images\/fv-2_sp.jpg",
-            "url": ""
-          }
-        },
-        "slide_UyPW94": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/small-business-interior.jpg",
-            "url": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide_gD8RXN",
-        "slide_d4XftY",
-        "slide_UyPW94"
-      ],
-      "settings": {
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_sp": 0,
-        "padding_bottom_sp": 0
-      }
-    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -78,38 +39,131 @@
         "show_text_below": false
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "slideshow_zGARAk": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_z7GEJn": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fv-2_pc.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_bjtBfM": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_xHJBEe": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/small-business-interior.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_z7GEJn",
+        "slide_bjtBfM",
+        "slide_xHJBEe"
+      ],
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "c_slider_7qEL7M": {
+      "type": "c_slider-end",
+      "blocks": {
+        "image_pAkDVq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg"
+          }
+        },
+        "image_mHCpqP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg"
+          }
+        },
+        "image_ATtG7C": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/small-business-interior.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_pAkDVq",
+        "image_mHCpqP",
+        "image_ATtG7C"
+      ],
+      "settings": {
+        "title": "見出し",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_sp": 0,
+        "padding_bottom_sp": 0
+      }
+    },
+    "c_slider_collection_nmE3Pb": {
+      "type": "c_slider-collection",
+      "settings": {
+        "title": "見出し",
         "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_sp": 0,
+        "padding_bottom_sp": 0
       }
     }
   },
   "order": [
-    "c_slider_7qEL7M",
     "image_banner",
-    "featured_collection"
+    "slideshow_zGARAk",
+    "c_slider_7qEL7M",
+    "c_slider_collection_nmE3Pb"
   ]
 }
