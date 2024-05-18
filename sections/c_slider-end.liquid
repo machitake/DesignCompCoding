@@ -7,7 +7,7 @@
   <div class="splide__track">
 		<ul class="splide__list">
       {% for block in section.blocks %}
-      <li class="splide__slide">
+      <li class="splide__slide" {{ block.shopify_attributes }} data-block-id="{{block.id}}">
         {%- if block.settings.image != blank -%}
           {{ block.settings.image | image_url: width: 1920 | image_tag: alt: block.settings.image.alt, loading: "lazy", sizes: "100vw" }}
         {%- endif -%}
@@ -18,11 +18,35 @@
 </div>
 
 <script>
-  document.addEventListener( 'DOMContentLoaded', function() {
-    var splide = new Splide( '.c_splide-{{ section.id }}', {
-    });
+  document.addEventListener('DOMContentLoaded', function() {
+
+    let splideOptions = {
+
+    };
+
+    let splide = new Splide('.c_splide-{{ section.id }}', splideOptions);
+
     splide.mount();
-  } );
+
+    {% if request.design_mode %}
+      document.addEventListener('shopify:section:load', function (e) {
+        if (e.detail.sectionId === '{{ section.id }}') {
+          splide.destroy();
+          splide = new Splide('.c_splide-{{ section.id }}', splideOptions);
+          splide.mount();
+        }
+      });
+      
+      document.addEventListener('shopify:block:select', function (e) {
+        var blockId = e.detail.blockId;
+        var targetSlide = document.querySelector(`.splide__slide[data-block-id="${blockId}"]`);
+        if (targetSlide) {
+            var slideIndex = Array.from(targetSlide.parentElement.children).indexOf(targetSlide);
+            splide.go(slideIndex);
+        }
+      });
+    {% endif %}
+  });
 </script>
 
 {% schema %}
